@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RayDesk</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="phase_0_title">Phase 0: Capability Test</string>
+    <string name="double_tap_to_exit">Double-tap temple to exit</string>
+</resources>

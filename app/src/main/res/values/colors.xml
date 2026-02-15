@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#808080</color>
+
+    <!-- RayNeo theme colors (from design spec) -->
+    <color name="rayneo_cyan">#00D4FF</color>
+    <color name="rayneo_green">#00FF88</color>
+    <color name="rayneo_red">#FF4444</color>
+    <color name="rayneo_yellow">#FFCC00</color>
+
+    <!-- Status colors (from design spec) -->
+    <color name="status_connected">#0FC843</color>
+    <color name="status_reconnecting">#F1C426</color>
+    <color name="status_connecting">#1E2DED</color>
+    <color name="status_disconnected">#F02A23</color>
+
+    <!-- Edge glint indicator (50% transparent blue) -->
+    <color name="glint_blue">#801E2DED</color>
+
+    <!-- Focus colors (from RayDesk design spec) -->
+    <color name="focus_blue">#1E2DED</color>
+    <color name="online_green">#0FC843</color>
+    <color name="offline_gray">#666666</color>
+</resources>

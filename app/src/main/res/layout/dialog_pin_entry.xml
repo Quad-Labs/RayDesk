@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PIN Entry Dialog Layout for RayDesk AR glasses.
+
+    This layout provides an alternative XML-based layout for the PinEntryDialog.
+    The dialog primarily uses programmatic layout creation for flexibility,
+    but this XML can be used as a reference or alternative implementation.
+
+    Design compliance:
+    - Pure black background (#000000)
+    - White text
+    - Blue focus (#1E2DED)
+    - 22sp for digits, 28sp for title
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Content container with black background -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvPinTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter PIN"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray" />
+
+        <!-- PIN Display -->
+        <TextView
+            android:id="@+id/tvPinDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:letterSpacing="0.1"
+            android:text="[_] [_] [_] [_]"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <!-- Number Grid Container -->
+        <com.raydesk.ui.NumberGridView
+            android:id="@+id/numberGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray" />
+
+        <!-- Hint Text -->
+        <TextView
+            android:id="@+id/tvPinHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Look at number \u2022 Tap to select"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

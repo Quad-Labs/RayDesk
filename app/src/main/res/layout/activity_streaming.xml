@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Binocular video container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Left eye: actual video rendering -->
+        <TextureView
+            android:id="@+id/videoTextureView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- Right eye: mirrors left eye -->
+        <com.ffalcon.mercury.android.sdk.ui.wiget.MirroringView
+            android:id="@+id/mirrorView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#000000" />
+
+    </LinearLayout>
+
+    <!-- Binocular status overlay - duplicated for both eyes -->
+    <LinearLayout
+        android:id="@+id/statusContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <!-- Left eye status -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#00FFFF"
+                android:textSize="14sp"
+                android:background="#80000000"
+                android:padding="4dp" />
+        </FrameLayout>
+
+        <!-- Right eye status (mirror) -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvStatusRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#00FFFF"
+                android:textSize="14sp"
+                android:background="#80000000"
+                android:padding="4dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Connection overlay for connecting/reconnecting states -->
+    <com.raydesk.ui.ConnectionOverlay
+        android:id="@+id/connectionOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Game-style settings menu -->
+    <com.raydesk.ui.GameStyleMenuOverlay
+        android:id="@+id/gameMenuOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>
